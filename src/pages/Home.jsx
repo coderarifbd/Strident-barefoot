@@ -39,7 +39,17 @@ const STATS = [
   { value: '100%', label: 'Flexible Sole', Icon: Zap },
 ];
 
+const HERO_SLIDES = [
+  { img: '/feature_toebox.jpg', label: 'Wide Toe Box Freedom', tag: '👣 Toe Protection' },
+  { img: '/feature_zerodrop.jpg', label: 'Zero-Drop Flat Soles', tag: '⚡ Natural Gait' },
+  { img: '/feature_flexibility.jpg', label: '360° Twistable Flex', tag: '🌀 Super Bendy' },
+  { img: '/feature_drainage.jpg', label: 'Instant Water Drainage', tag: '💧 Quick-Dry' },
+  { img: '/feature_lifestyle.jpg', label: 'Multi-Activity Lifestyle', tag: '🏄 All-Terrain' },
+];
+
 export default function Home() {
+  const [activeHeroSlide, setActiveHeroSlide] = useState(0);
+
   return (
     <div>
       {/* Hero Section */}
@@ -50,6 +60,8 @@ export default function Home() {
           display: 'flex',
           alignItems: 'center',
           overflow: 'hidden',
+          paddingTop: 40,
+          paddingBottom: 60,
         }}
       >
         {/* Background Image */}
@@ -60,131 +72,283 @@ export default function Home() {
             backgroundImage: 'url(/hero_banner.jpg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            filter: 'brightness(0.35)',
+            filter: 'brightness(0.25)',
           }}
         />
 
-        {/* Gradient Overlay */}
+        {/* Dynamic Gradient Glow Overlay */}
         <div
           style={{
             position: 'absolute',
             inset: 0,
-            background: 'linear-gradient(135deg, rgba(15,15,26,0.85) 0%, rgba(26,26,46,0.5) 50%, transparent 100%)',
+            background: 'radial-gradient(circle at 70% 30%, rgba(232, 184, 109, 0.12) 0%, transparent 60%), linear-gradient(135deg, rgba(15,15,26,0.92) 0%, rgba(26,26,46,0.75) 100%)',
           }}
         />
 
         {/* Content */}
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center flex flex-col items-center justify-center">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            style={{ maxWidth: 840, margin: '0 auto' }}
-            className="flex flex-col items-center text-center"
-          >
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            
+            {/* Left Column: Headline & Benefits (7 cols) */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2 }}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 8,
-                background: 'rgba(232,184,109,0.12)',
-                border: '1px solid rgba(232,184,109,0.25)',
-                borderRadius: 20,
-                padding: '6px 18px',
-                fontSize: 13,
-                fontWeight: 700,
-                color: '#e8b86d',
-                letterSpacing: '1.5px',
-                textTransform: 'uppercase',
-                marginBottom: 24,
-                boxShadow: '0 0 20px rgba(232,184,109,0.15)',
-              }}
+              initial={{ opacity: 0, x: -40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="lg:col-span-7 flex flex-col items-start text-left"
             >
-              🏃 Real Barefoot Trail Shoes
+              {/* Category Pill */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.15 }}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 8,
+                  background: 'rgba(232,184,109,0.14)',
+                  border: '1px solid rgba(232,184,109,0.3)',
+                  borderRadius: 20,
+                  padding: '6px 18px',
+                  fontSize: 13,
+                  fontWeight: 700,
+                  color: '#e8b86d',
+                  letterSpacing: '1.2px',
+                  textTransform: 'uppercase',
+                  marginBottom: 20,
+                  boxShadow: '0 0 25px rgba(232,184,109,0.2)',
+                }}
+              >
+                <span>🌊 Instant Drainage</span>
+                <span>•</span>
+                <span>👣 Wide Toe Box</span>
+                <span>•</span>
+                <span>⚡ Zero Drop</span>
+              </motion.div>
+
+              {/* Headline */}
+              <h1
+                className="hero-heading"
+                style={{
+                  fontSize: 'clamp(42px, 5.5vw, 76px)',
+                  lineHeight: 1.05,
+                  marginBottom: 20,
+                  textAlign: 'left',
+                  letterSpacing: '-0.02em',
+                }}
+              >
+                Walk Free.
+                <br />
+                <span className="gold-text">Feel Happy.</span>
+                <br />
+                Pure Barefoot Freedom.
+              </h1>
+
+              {/* Subtitle */}
+              <p
+                style={{
+                  fontSize: 'clamp(15px, 1.6vw, 18px)',
+                  color: 'rgba(240,240,245,0.85)',
+                  lineHeight: 1.7,
+                  marginBottom: 28,
+                  maxWidth: 620,
+                }}
+              >
+                Super comfortable water & trail barefoot shoes! Designed with instant sole drainage ports, zero-drop soles, 360° twistable flex, and a protective wide toe box.
+              </p>
+
+              {/* Feature Highlights List */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-8 w-full max-w-xl">
+                {[
+                  { icon: '💧', text: 'Instant Sole Drainage Holes' },
+                  { icon: '👣', text: 'Wide Toe Box & Toe Guard' },
+                  { icon: '⚡', text: '100% Flat Zero-Drop Soles' },
+                  { icon: '🌀', text: '360° Flexible & Featherlight' },
+                ].map((item, idx) => (
+                  <div
+                    key={idx}
+                    style={{
+                      background: 'rgba(255,255,255,0.04)',
+                      border: '1px solid rgba(255,255,255,0.08)',
+                      borderRadius: 12,
+                      padding: '10px 14px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 10,
+                    }}
+                  >
+                    <span style={{ fontSize: 18 }}>{item.icon}</span>
+                    <span style={{ fontSize: 13.5, color: '#f0f0f5', fontWeight: 600 }}>{item.text}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-wrap items-center gap-4 mb-8">
+                <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}>
+                  <Link
+                    to="/shop"
+                    className="btn-gold flex items-center gap-2"
+                    style={{ padding: '16px 32px', fontSize: 16, display: 'inline-flex', textDecoration: 'none', borderRadius: 14 }}
+                  >
+                    Get Your Pair — $119.00
+                    <ArrowRight size={18} />
+                  </Link>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}>
+                  <a
+                    href="#philosophy"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: 8,
+                      padding: '16px 28px',
+                      fontSize: 16,
+                      background: 'rgba(255,255,255,0.06)',
+                      backdropFilter: 'blur(10px)',
+                      border: '1px solid rgba(255,255,255,0.15)',
+                      borderRadius: 14,
+                      color: '#f0f0f5',
+                      textDecoration: 'none',
+                      fontWeight: 600,
+                    }}
+                  >
+                    Why Barefoot is Best
+                  </a>
+                </motion.div>
+              </div>
+
+              {/* Trust Badges */}
+              <div className="flex flex-wrap items-center gap-6" style={{ paddingTop: 8, borderTop: '1px solid rgba(255,255,255,0.08)', width: '100%' }}>
+                <div className="flex items-center gap-2">
+                  <div style={{ color: '#e8b86d', fontSize: 15 }}>⭐</div>
+                  <span style={{ fontSize: 13, color: 'rgba(240,240,245,0.7)', fontWeight: 500 }}>4.9/5 from 12,000+ happy feet</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div style={{ color: '#e8b86d', fontSize: 15 }}>🚚</div>
+                  <span style={{ fontSize: 13, color: 'rgba(240,240,245,0.7)', fontWeight: 500 }}>Free shipping over $75</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div style={{ color: '#e8b86d', fontSize: 15 }}>🛡️</div>
+                  <span style={{ fontSize: 13, color: 'rgba(240,240,245,0.7)', fontWeight: 500 }}>30-Day happy guarantee</span>
+                </div>
+              </div>
             </motion.div>
 
-            <h1
-              className="hero-heading"
-              style={{
-                fontSize: 'clamp(48px, 7.5vw, 92px)',
-                marginBottom: 24,
-                textAlign: 'center',
-              }}
+            {/* Right Column: Interactive Product Showcase Card (5 cols) */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, x: 40 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="lg:col-span-5"
             >
-              Walk Free.
-              <br />
-              <span className="gold-text">Feel Happy.</span>
-              <br />
-              Barefoot Comfort.
-            </h1>
-
-            <p
-              style={{
-                fontSize: 'clamp(16px, 2vw, 20px)',
-                color: 'rgba(240,240,245,0.85)',
-                lineHeight: 1.75,
-                marginBottom: 40,
-                maxWidth: 680,
-                margin: '0 auto 40px',
-                textAlign: 'center',
-              }}
-            >
-              The Strident Barefoot Shoe gives your feet room to breathe, wiggle, and move naturally — just like walking barefoot on soft grass!
-            </p>
-
-            <div className="flex flex-wrap items-center justify-center gap-5">
-              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}>
-                <Link
-                  to="/shop"
-                  className="btn-gold flex items-center gap-2"
-                  style={{ padding: '18px 36px', fontSize: 17, display: 'inline-flex', textDecoration: 'none', borderRadius: 14 }}
-                >
-                  Get Your Pair — $119.00
-                  <ArrowRight size={18} />
-                </Link>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}>
-                <a
-                  href="#philosophy"
+              <div
+                style={{
+                  position: 'relative',
+                  background: 'radial-gradient(circle at top right, rgba(232, 184, 109, 0.15), rgba(15, 16, 28, 0.95) 70%)',
+                  border: '1px solid rgba(232, 184, 109, 0.3)',
+                  borderRadius: 28,
+                  padding: 20,
+                  boxShadow: '0 30px 80px rgba(0, 0, 0, 0.7), 0 0 40px rgba(232, 184, 109, 0.15)',
+                }}
+              >
+                {/* Main Image View */}
+                <div
                   style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: 8,
-                    padding: '18px 36px',
-                    fontSize: 17,
-                    background: 'rgba(255,255,255,0.06)',
-                    backdropFilter: 'blur(10px)',
-                    border: '1px solid rgba(255,255,255,0.15)',
-                    borderRadius: 14,
-                    color: '#f0f0f5',
-                    textDecoration: 'none',
-                    fontWeight: 600,
+                    position: 'relative',
+                    aspectRatio: '1/1',
+                    borderRadius: 20,
+                    overflow: 'hidden',
+                    background: '#0d0e17',
+                    border: '1px solid rgba(255,255,255,0.1)',
                   }}
                 >
-                  Why Your Feet Will Love It
-                </a>
-              </motion.div>
-            </div>
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={activeHeroSlide}
+                      src={HERO_SLIDES[activeHeroSlide].img}
+                      alt={HERO_SLIDES[activeHeroSlide].label}
+                      initial={{ opacity: 0, scale: 1.05 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.95 }}
+                      transition={{ duration: 0.3 }}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
+                  </AnimatePresence>
 
-            {/* Trust Badges */}
-            <div className="flex flex-wrap items-center justify-center gap-8" style={{ marginTop: 10 }}>
-              <div className="flex items-center gap-2">
-                <div style={{ color: '#e8b86d', fontSize: 16 }}>⭐</div>
-                <span style={{ fontSize: 14, color: 'rgba(240,240,245,0.7)', fontWeight: 500 }}>4.9/5 from 12,000+ happy feet</span>
+                  {/* Floating Badges */}
+                  <div
+                    style={{
+                      position: 'absolute',
+                      top: 14,
+                      left: 14,
+                      background: 'rgba(10, 11, 18, 0.85)',
+                      backdropFilter: 'blur(10px)',
+                      border: '1px solid rgba(232, 184, 109, 0.4)',
+                      borderRadius: 20,
+                      padding: '5px 14px',
+                      fontSize: 12,
+                      fontWeight: 700,
+                      color: '#f0f0f5',
+                    }}
+                  >
+                    {HERO_SLIDES[activeHeroSlide].tag}
+                  </div>
+
+                  <div
+                    style={{
+                      position: 'absolute',
+                      bottom: 14,
+                      left: 14,
+                      right: 14,
+                      background: 'rgba(10, 11, 18, 0.88)',
+                      backdropFilter: 'blur(12px)',
+                      border: '1px solid rgba(255, 255, 255, 0.12)',
+                      borderRadius: 14,
+                      padding: '10px 16px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                    }}
+                  >
+                    <span style={{ fontSize: 13, fontWeight: 700, color: '#e8b86d' }}>
+                      {HERO_SLIDES[activeHeroSlide].label}
+                    </span>
+                    <span style={{ fontSize: 11, color: '#8e8eb4', fontWeight: 600 }}>
+                      Image {activeHeroSlide + 1} of 5
+                    </span>
+                  </div>
+                </div>
+
+                {/* Interactive Thumbnail Selector Bar */}
+                <div style={{ marginTop: 14 }}>
+                  <p style={{ fontSize: 11, color: '#8888aa', marginBottom: 8, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', textAlign: 'center' }}>
+                    Click to Inspect Amazon Product Graphics:
+                  </p>
+                  <div className="grid grid-cols-5 gap-2">
+                    {HERO_SLIDES.map((slide, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => setActiveHeroSlide(idx)}
+                        style={{
+                          aspectRatio: '1/1',
+                          borderRadius: 10,
+                          overflow: 'hidden',
+                          padding: 0,
+                          border: activeHeroSlide === idx ? '2px solid #e8b86d' : '1px solid rgba(255,255,255,0.15)',
+                          opacity: activeHeroSlide === idx ? 1 : 0.65,
+                          cursor: 'pointer',
+                          transition: 'all 0.2s ease',
+                          background: '#0e0f17',
+                        }}
+                      >
+                        <img src={slide.img} alt={slide.label} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                      </button>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <div style={{ color: '#e8b86d', fontSize: 16 }}>🚚</div>
-                <span style={{ fontSize: 14, color: 'rgba(240,240,245,0.7)', fontWeight: 500 }}>Free shipping over $75</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div style={{ color: '#e8b86d', fontSize: 16 }}>🛡️</div>
-                <span style={{ fontSize: 14, color: 'rgba(240,240,245,0.7)', fontWeight: 500 }}>30-Day happy feet guarantee</span>
-              </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
 
         {/* Bottom fade */}
@@ -194,7 +358,7 @@ export default function Home() {
             bottom: 0,
             left: 0,
             right: 0,
-            height: 120,
+            height: 80,
             background: 'linear-gradient(to top, #0f0f1a, transparent)',
           }}
         />
