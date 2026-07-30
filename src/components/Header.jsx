@@ -26,11 +26,11 @@ export default function Header() {
         <div className="marquee-inner text-xs font-semibold tracking-wider flex items-center" style={{ color: '#e8b86d' }}>
           {Array(4).fill(null).map((_, i) => (
             <span key={i} className="inline-flex items-center gap-10 px-10">
-              <span className="inline-flex items-center gap-2"><span>🚚</span> Free Express Shipping on Orders Over $75</span>
+              <span className="inline-flex items-center gap-2"><span>🚚</span> Free Shipping on Orders Over $75</span>
               <span className="opacity-40 select-none" style={{ fontSize: '11px', transform: 'translateY(-1px)' }}>|</span>
-              <span className="inline-flex items-center gap-2"><span>🛡️</span> 30-Day Natural Motion Guarantee</span>
+              <span className="inline-flex items-center gap-2"><span>🛡️</span> 30-Day Happy Feet Guarantee</span>
               <span className="opacity-40 select-none" style={{ fontSize: '11px', transform: 'translateY(-1px)' }}>|</span>
-              <span className="inline-flex items-center gap-2"><span>🌿</span> Ethically Crafted Minimalist Footwear</span>
+              <span className="inline-flex items-center gap-2"><span>🌿</span> Real Barefoot Comfort & Wide Toe Room</span>
               <span className="opacity-40 select-none" style={{ fontSize: '11px', transform: 'translateY(-1px)' }}>|</span>
             </span>
           ))}

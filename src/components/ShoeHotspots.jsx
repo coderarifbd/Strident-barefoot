@@ -7,36 +7,36 @@ const HOTSPOTS = [
     id: 1,
     x: '28%',
     y: '58%',
-    title: 'Anatomic Wide Toe Box',
-    desc: 'Allows toes to splay naturally for maximum stability, power transfer, and long-term foot health.',
-    tag: 'Ergonomic Design',
+    title: 'Wide Toe Box & Toe Guard',
+    desc: 'Ample space lets toes spread out naturally without red pressure spots. Tough rubber cap protects toes against rocks!',
+    tag: 'Pure Barefoot Freedom',
     icon: Sparkles,
   },
   {
     id: 2,
     x: '52%',
     y: '72%',
-    title: '4mm TrailGrip Sole',
-    desc: 'Proprietary multi-directional rubber lugs provide supreme traction on mud, rocks, and wet pavement.',
-    tag: 'Trail Traction',
+    title: 'Instant Drainage Holes',
+    desc: 'Bottom drainage holes let water pour out instantly so you move effortlessly during every beach wade or trail crossing.',
+    tag: 'Quick-Dry Sole',
     icon: Zap,
   },
   {
     id: 3,
     x: '76%',
     y: '54%',
-    title: 'Zero-Drop Platform',
-    desc: 'Equal heel-to-toe height restores natural posture and eliminates stress on knees and lower back.',
-    tag: 'Zero-Drop',
+    title: 'Zero Drop Soles',
+    desc: 'Sense the ground fully with a natural walking gait. Relieves joint pressure for all-day easy walking.',
+    tag: 'Natural Gait Platform',
     icon: Shield,
   },
   {
     id: 4,
     x: '48%',
     y: '34%',
-    title: '360° Flex Mesh Upper',
-    desc: 'Ultra-breathable hydrophobic mesh molds to your foot while allowing full natural articulation.',
-    tag: 'Breathable Upper',
+    title: '360° Flexible & Light Mesh',
+    desc: 'Twists completely in half! Breathable fabric and skin-friendly lining give you lightweight comfort without limits.',
+    tag: 'Super Bendy Upper',
     icon: Check,
   },
 ];
@@ -77,16 +77,16 @@ export default function ShoeHotspots() {
               marginBottom: 16,
             }}
           >
-            Anatomy of Natural Motion
+            Simple & Smart Design
           </span>
           <h2
             className="font-display"
             style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 900, lineHeight: 1.05, letterSpacing: '-0.03em' }}
           >
-            Interactive Product <span className="gold-text">Exploder</span>
+            How Our Shoe <span className="gold-text">Helps Your Feet</span>
           </h2>
           <p style={{ fontSize: 16, color: '#8e8eb4', marginTop: 16 }}>
-            Click the interactive hotspot markers on the shoe to inspect the engineering behind the TrailGrip.
+            Click the glowing dots on the shoe to see why your feet will love walking in these!
           </p>
         </div>
 
@@ -105,8 +105,8 @@ export default function ShoeHotspots() {
               }}
             >
               <img
-                src="/shoe_stealth_black.jpg"
-                alt="Strident TrailGrip Hotspot Visualizer"
+                src="/feature_flexibility.jpg"
+                alt="Strident Barefoot Feature Visualizer"
                 style={{
                   width: '100%',
                   height: 'auto',

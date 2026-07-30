@@ -394,7 +394,7 @@ export default function OrderSuccess() {
         >
           Ridgewell Supply Co LLC
         </a>
-        . Questions? Email hello@ridgewellsupplycollc.com
+        . Need help? Visit ridgewellsupplycollc.com
       </motion.p>
     </div>
   );

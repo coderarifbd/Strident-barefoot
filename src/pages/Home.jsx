@@ -8,31 +8,35 @@ import ComparisonTable from '../components/ComparisonTable';
 const BENEFITS = [
   {
     icon: '👣',
-    title: 'Wide Toe Box',
-    desc: 'Anatomically shaped toe box allows your toes to splay naturally, strengthening intrinsic foot muscles and improving balance with every step.',
+    img: '/feature_toebox.jpg',
+    title: 'Wide Toe Box & Protection',
+    desc: 'Ample space lets your toes spread out naturally without red pressure spots. Plus a tough rubber toe guard protects against rocks!',
   },
   {
     icon: '⚡',
-    title: 'Zero-Drop Heel',
-    desc: 'Equal heel-to-toe height promotes a natural midfoot strike, reducing impact forces and lower back stress for healthier long-term biomechanics.',
+    img: '/feature_zerodrop.jpg',
+    title: 'Zero-Drop Soles',
+    desc: '100% Flat from heel to toe! Promotes natural walking posture and relieves pressure on your back, knees, and hips for all-day comfort.',
   },
   {
-    icon: '🌊',
-    title: 'Ultra-Flexible Sole',
-    desc: 'Our 4mm TrailGrip outsole flexes with your foot in 360°, allowing every muscle and tendon to activate and develop with each run.',
+    icon: '💧',
+    img: '/feature_drainage.jpg',
+    title: 'Instant Water Drainage',
+    desc: 'Special sole drainage holes pour water right out when wading! Quick-drying breathable fabric keeps your feet cool and dry.',
   },
   {
-    icon: '🌍',
-    title: 'Ground Feel Sensory',
-    desc: 'Proprioceptive feedback from the trail surface sharpens your nervous system response, improving agility and reducing injury risk over time.',
+    icon: '🌀',
+    img: '/feature_flexibility.jpg',
+    title: '360° Twistable Flex',
+    desc: 'Twists completely in half! Super lightweight and flexible construction lets your feet move freely without any limits.',
   },
 ];
 
 const STATS = [
-  { value: '12,000+', label: 'Happy Runners', Icon: Users },
-  { value: '4.9★', label: 'Average Rating', Icon: Star },
-  { value: '30-Day', label: 'Motion Guarantee', Icon: Award },
-  { value: '4mm', label: 'TrailGrip Sole', Icon: Zap },
+  { value: '12,000+', label: 'Happy Walkers', Icon: Users },
+  { value: '4.9★', label: 'Love Rating', Icon: Star },
+  { value: '30-Day', label: 'Happy Guarantee', Icon: Award },
+  { value: '100%', label: 'Flexible Sole', Icon: Zap },
 ];
 
 export default function Home() {
@@ -99,28 +103,28 @@ export default function Home() {
                 boxShadow: '0 0 20px rgba(232,184,109,0.15)',
               }}
             >
-              🏃 New: TrailGrip Minimalist
+              🏃 Real Barefoot Trail Shoes
             </motion.div>
 
             <h1
               className="hero-heading"
               style={{
-                fontSize: 'clamp(52px, 8vw, 96px)',
+                fontSize: 'clamp(48px, 7.5vw, 92px)',
                 marginBottom: 24,
                 textAlign: 'center',
               }}
             >
-              Reconnect With
+              Walk Free.
               <br />
-              <span className="gold-text">Every Step.</span>
+              <span className="gold-text">Feel Happy.</span>
               <br />
-              Zero-Drop Footwear.
+              Barefoot Comfort.
             </h1>
 
             <p
               style={{
                 fontSize: 'clamp(16px, 2vw, 20px)',
-                color: 'rgba(240,240,245,0.8)',
+                color: 'rgba(240,240,245,0.85)',
                 lineHeight: 1.75,
                 marginBottom: 40,
                 maxWidth: 680,
@@ -128,8 +132,7 @@ export default function Home() {
                 textAlign: 'center',
               }}
             >
-              The Strident TrailGrip Minimalist Running Shoe. Engineered to honor your
-              foot's natural movement — feel the ground, free your stride.
+              The Strident Barefoot Shoe gives your feet room to breathe, wiggle, and move naturally — just like walking barefoot on soft grass!
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-5">
@@ -139,7 +142,7 @@ export default function Home() {
                   className="btn-gold flex items-center gap-2"
                   style={{ padding: '18px 36px', fontSize: 17, display: 'inline-flex', textDecoration: 'none', borderRadius: 14 }}
                 >
-                  Shop TrailGrip — $119.00
+                  Get Your Pair — $119.00
                   <ArrowRight size={18} />
                 </Link>
               </motion.div>
@@ -161,7 +164,7 @@ export default function Home() {
                     fontWeight: 600,
                   }}
                 >
-                  Our Philosophy
+                  Why Your Feet Will Love It
                 </a>
               </motion.div>
             </div>
@@ -170,7 +173,7 @@ export default function Home() {
             <div className="flex flex-wrap items-center justify-center gap-8" style={{ marginTop: 10 }}>
               <div className="flex items-center gap-2">
                 <div style={{ color: '#e8b86d', fontSize: 16 }}>⭐</div>
-                <span style={{ fontSize: 14, color: 'rgba(240,240,245,0.7)', fontWeight: 500 }}>4.9/5 from 12,000+ runners</span>
+                <span style={{ fontSize: 14, color: 'rgba(240,240,245,0.7)', fontWeight: 500 }}>4.9/5 from 12,000+ happy feet</span>
               </div>
               <div className="flex items-center gap-2">
                 <div style={{ color: '#e8b86d', fontSize: 16 }}>🚚</div>
@@ -178,7 +181,7 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-2">
                 <div style={{ color: '#e8b86d', fontSize: 16 }}>🛡️</div>
-                <span style={{ fontSize: 14, color: 'rgba(240,240,245,0.7)', fontWeight: 500 }}>30-Day guarantee</span>
+                <span style={{ fontSize: 14, color: 'rgba(240,240,245,0.7)', fontWeight: 500 }}>30-Day happy feet guarantee</span>
               </div>
             </div>
           </motion.div>
@@ -259,32 +262,28 @@ export default function Home() {
                   marginBottom: 16,
                 }}
               >
-                The Strident Philosophy
+                Why Barefoot Shoes?
               </p>
               <h2
                 className="font-display"
                 style={{ fontSize: 'clamp(28px, 4vw, 46px)', fontWeight: 800, lineHeight: 1.1, marginBottom: 24 }}
               >
-                Your Feet Were Built
+                Your Feet Were Made
                 <br />
-                <span className="gold-text">for This.</span>
+                <span className="gold-text">To Move Freely!</span>
               </h2>
               <p style={{ fontSize: 16, color: '#c0c0d8', lineHeight: 1.8, marginBottom: 20 }}>
-                Modern footwear has been systematically weakening the human foot for decades.
-                Excessive cushioning, elevated heels, and narrow toe boxes force unnatural
-                movement patterns that lead to pain, injury, and dysfunction.
+                Stiff old shoes squeeze your toes together and lift your heels unnaturally. That can make your feet, knees, and back tired and sore!
               </p>
               <p style={{ fontSize: 16, color: '#c0c0d8', lineHeight: 1.8, marginBottom: 32 }}>
-                Strident Barefoot was founded on a simple principle: trust your body.
-                Our TrailGrip shoe is a tool for reconnection — not a replacement for
-                what evolution already perfected over 2 million years.
+                Strident Barefoot shoes give your toes lots of room to wiggle and keep your feet completely flat. It feels just like walking barefoot, with a protective non-slip sole!
               </p>
               <Link
                 to="/shop"
                 className="btn-gold inline-flex items-center gap-2"
                 style={{ padding: '14px 28px', fontSize: 15, textDecoration: 'none', borderRadius: 12 }}
               >
-                Experience the TrailGrip
+                Try Happy Feet Shoes
                 <ArrowRight size={16} />
               </Link>
             </motion.div>
@@ -298,8 +297,8 @@ export default function Home() {
             >
               <div className="float" style={{ position: 'relative', zIndex: 1 }}>
                 <img
-                  src="/shoe_earth_olive.jpg"
-                  alt="Earth Olive TrailGrip"
+                  src="/feature_zerodrop.jpg"
+                  alt="Zero Drop Barefoot Shoe"
                   style={{
                     width: '100%',
                     borderRadius: 24,
@@ -359,26 +358,34 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="benefit-card glass-card"
+                className="benefit-card glass-card flex flex-col"
+                style={{ overflow: 'hidden', padding: 0 }}
               >
-                <div
-                  style={{
-                    width: 52,
-                    height: 52,
-                    background: 'rgba(232,184,109,0.1)',
-                    border: '1px solid rgba(232,184,109,0.2)',
-                    borderRadius: 14,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: 24,
-                    marginBottom: 16,
-                  }}
-                >
-                  {benefit.icon}
+                <div style={{ aspectRatio: '1/1', width: '100%', overflow: 'hidden', background: '#0e0f17', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
+                  <img src={benefit.img} alt={benefit.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
-                <h3 style={{ fontSize: 17, fontWeight: 700, marginBottom: 10 }}>{benefit.title}</h3>
-                <p style={{ fontSize: 13, color: '#c0c0d8', lineHeight: 1.7 }}>{benefit.desc}</p>
+                <div style={{ padding: '20px' }} className="flex-1 flex flex-col">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div
+                      style={{
+                        width: 38,
+                        height: 38,
+                        background: 'rgba(232,184,109,0.1)',
+                        border: '1px solid rgba(232,184,109,0.2)',
+                        borderRadius: 10,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontSize: 18,
+                        flexShrink: 0,
+                      }}
+                    >
+                      {benefit.icon}
+                    </div>
+                    <h3 style={{ fontSize: 16, fontWeight: 700, lineHeight: 1.2 }}>{benefit.title}</h3>
+                  </div>
+                  <p style={{ fontSize: 13, color: '#c0c0d8', lineHeight: 1.6 }}>{benefit.desc}</p>
+                </div>
               </motion.div>
             ))}
           </div>

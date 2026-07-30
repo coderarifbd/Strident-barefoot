@@ -23,11 +23,11 @@ const LEGAL_CONTENT = {
       },
       {
         heading: 'Your Rights',
-        body: 'You have the right to access, correct, or delete your personal information. You may also opt out of marketing communications at any time. To exercise these rights, contact us at privacy@ridgewellsupplycollc.com.',
+        body: 'You have the right to access, correct, or delete your personal information. You may also opt out of marketing communications at any time. To exercise these rights, visit our website at https://ridgewellsupplycollc.com/',
       },
       {
         heading: 'Contact',
-        body: 'For privacy-related inquiries, contact Ridgewell Supply Co LLC at privacy@ridgewellsupplycollc.com or visit https://ridgewellsupplycollc.com/',
+        body: 'For privacy-related inquiries, visit Ridgewell Supply Co LLC at https://ridgewellsupplycollc.com/',
       },
     ],
   },
@@ -73,11 +73,11 @@ const LEGAL_CONTENT = {
       },
       {
         heading: 'How to Initiate a Return',
-        body: 'Email returns@ridgewellsupplycollc.com with your order number and reason for return. We will provide a prepaid shipping label within 2 business days. Once we receive and inspect your return, we will process your refund within 5-7 business days.',
+        body: 'Visit ridgewellsupplycollc.com with your order number and reason for return. We will provide a prepaid shipping label within 2 business days. Once we receive and inspect your return, we will process your refund within 5-7 business days.',
       },
       {
         heading: 'Exchanges',
-        body: 'For exchanges (different size or colorway), please note your preferred alternative in your return email. We will ship the replacement pair at no additional charge once we have confirmed receipt of your original item.',
+        body: 'For exchanges (different size or colorway), please note your preferred alternative on our website return request form. We will ship the replacement pair at no additional charge once we have confirmed receipt of your original item.',
       },
       {
         heading: 'Refund Processing',
@@ -94,7 +94,7 @@ const LEGAL_CONTENT = {
       },
       {
         heading: 'Consumer Protection Compliance',
-        body: 'We comply with all applicable federal and state consumer protection laws, including the Federal Trade Commission Act, the CAN-SPAM Act, and applicable state consumer protection statutes. If you believe your consumer rights have been violated, please contact us immediately.',
+        body: 'We comply with all applicable federal and state consumer protection laws, including the Federal Trade Commission Act, the CAN-SPAM Act, and applicable state consumer protection statutes. If you believe your consumer rights have been violated, please contact us immediately through ridgewellsupplycollc.com.',
       },
       {
         heading: 'Product Safety & Standards',
@@ -102,15 +102,15 @@ const LEGAL_CONTENT = {
       },
       {
         heading: 'Accessibility Statement',
-        body: 'Ridgewell Supply Co LLC is committed to ensuring digital accessibility for people with disabilities. We continually improve the user experience for everyone and apply relevant accessibility standards. If you experience any accessibility barriers, please contact us.',
+        body: 'Ridgewell Supply Co LLC is committed to ensuring digital accessibility for people with disabilities. We continually improve the user experience for everyone and apply relevant accessibility standards. If you experience any accessibility barriers, please visit ridgewellsupplycollc.com.',
       },
       {
         heading: 'DMCA Notice',
-        body: 'If you believe any content on our site infringes your copyright, please send a DMCA notice to legal@ridgewellsupplycollc.com with the required information. We will respond to valid notices in accordance with the Digital Millennium Copyright Act.',
+        body: 'If you believe any content on our site infringes your copyright, please submit a DMCA notice at ridgewellsupplycollc.com with the required information. We will respond to valid notices in accordance with the Digital Millennium Copyright Act.',
       },
       {
         heading: 'Contact for Legal Matters',
-        body: 'For legal inquiries, compliance questions, or formal notices, contact Ridgewell Supply Co LLC at legal@ridgewellsupplycollc.com or through the contact form at https://ridgewellsupplycollc.com/.',
+        body: 'For legal inquiries, compliance questions, or formal notices, visit Ridgewell Supply Co LLC at https://ridgewellsupplycollc.com/.',
       },
     ],
   },

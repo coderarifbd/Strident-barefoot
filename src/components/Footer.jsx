@@ -53,20 +53,21 @@ export default function Footer() {
             </Link>
 
             <p style={{ fontSize: 14.5, color: '#a1a1aa', lineHeight: 1.75, maxWidth: 420 }}>
-              Engineering footwear that honors the natural biomechanics of the human foot. 
-              Zero-drop, wide toe box design for peak athletic performance and lifelong foot strength.
+              Super comfortable shoes made for natural, happy feet! Lots of room for your toes to wiggle and a flat sole so walking feels as free as going barefoot on grass.
             </p>
 
             {/* Social Links */}
             <div className="flex items-center gap-3 mt-1">
               {[
-                { Icon: Globe, href: '#', label: 'Website' },
+                { Icon: Globe, href: 'https://ridgewellsupplycollc.com/', label: 'Website' },
                 { Icon: Share2, href: '#', label: 'Share' },
                 { Icon: Heart, href: '#', label: 'Favorites' },
               ].map(({ Icon, href, label }) => (
                 <a
                   key={label}
                   href={href}
+                  target={href.startsWith('http') ? '_blank' : undefined}
+                  rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   aria-label={label}
                   style={{
                     width: 40,
@@ -114,10 +115,10 @@ export default function Footer() {
             </h4>
             <div className="flex flex-col gap-3">
               {[
-                { label: 'Shop TrailGrip Minimalist', to: '/shop' },
-                { label: 'Our Barefoot Philosophy', to: '/#philosophy' },
-                { label: 'Interactive Size Guide', modal: 'sizeGuide' },
-                { label: 'Track Order Status', to: '#' },
+                { label: 'Shop Barefoot Shoes', to: '/shop' },
+                { label: 'Why Barefoot is Best', to: '/#philosophy' },
+                { label: 'Easy Size Finder', modal: 'sizeGuide' },
+                { label: 'Track Order', to: '#' },
               ].map((link) => (
                 link.to ? (
                   <Link
@@ -160,7 +161,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Contact & Support (4 cols) */}
+          {/* Website Info (4 cols) */}
           <div className="lg:col-span-4 flex flex-col gap-4">
             <h4
               style={{
@@ -172,22 +173,9 @@ export default function Footer() {
                 marginBottom: 4,
               }}
             >
-              Customer Support
+              Visit Our Website
             </h4>
             <div className="flex flex-col gap-3.5">
-              <a
-                href="mailto:hello@ridgewellsupplycollc.com"
-                className="flex items-center gap-2.5"
-                style={{ fontSize: 14, color: '#d4d4d8', textDecoration: 'none', transition: 'color 0.2s ease', fontWeight: 500 }}
-                onMouseEnter={(e) => e.currentTarget.style.color = '#e8b86d'}
-                onMouseLeave={(e) => e.currentTarget.style.color = '#d4d4d8'}
-              >
-                <div style={{ width: 28, height: 28, borderRadius: 6, background: 'rgba(232,184,109,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                  <Mail size={14} style={{ color: '#e8b86d' }} />
-                </div>
-                hello@ridgewellsupplycollc.com
-              </a>
-
               <a
                 href="https://ridgewellsupplycollc.com/"
                 target="_blank"
@@ -204,8 +192,8 @@ export default function Footer() {
               </a>
 
               <div style={{ fontSize: 13, color: '#8e8eb4', lineHeight: 1.6, marginTop: 4 }}>
-                ⏱️ Mon–Fri: 9:00 AM – 6:00 PM EST<br />
-                📦 Express orders ship within 1–2 business days
+                📦 Fast Shipping: Orders leave our warehouse in 1–2 business days.<br />
+                😊 30-Day Happy Feet Guarantee: Love them or send them back!
               </div>
             </div>
           </div>

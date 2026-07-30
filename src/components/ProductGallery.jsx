@@ -7,17 +7,35 @@ const COLORWAYS = [
   {
     name: 'Stealth Black',
     hex: '#1a1a1a',
-    images: ['/shoe_stealth_black.jpg', '/shoe_stealth_black.jpg', '/shoe_stealth_black.jpg'],
+    images: [
+      '/feature_toebox.jpg',
+      '/feature_zerodrop.jpg',
+      '/feature_flexibility.jpg',
+      '/feature_drainage.jpg',
+      '/feature_lifestyle.jpg',
+    ],
   },
   {
     name: 'Earth Olive',
     hex: '#5a6b3a',
-    images: ['/shoe_earth_olive.jpg', '/shoe_earth_olive.jpg', '/shoe_earth_olive.jpg'],
+    images: [
+      '/feature_zerodrop.jpg',
+      '/feature_toebox.jpg',
+      '/feature_flexibility.jpg',
+      '/feature_drainage.jpg',
+      '/feature_lifestyle.jpg',
+    ],
   },
   {
     name: 'Summit Gray',
     hex: '#8a8fa0',
-    images: ['/shoe_summit_gray.jpg', '/shoe_summit_gray.jpg', '/shoe_summit_gray.jpg'],
+    images: [
+      '/feature_drainage.jpg',
+      '/feature_zerodrop.jpg',
+      '/feature_toebox.jpg',
+      '/feature_flexibility.jpg',
+      '/feature_lifestyle.jpg',
+    ],
   },
 ];
 

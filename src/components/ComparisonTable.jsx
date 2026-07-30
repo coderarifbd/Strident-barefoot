@@ -3,29 +3,29 @@ import { Check, X, ShieldCheck, Sparkles } from 'lucide-react';
 
 const COMPARISONS = [
   {
-    feature: 'Toe Box Shape',
-    traditional: 'Narrow, tapered toe box that constricts toes and causes bunions',
-    strident: 'Anatomic wide toe box allowing full, natural toe splay',
+    feature: 'Toe Room & Protection',
+    traditional: 'Narrow tip squishes toes causing red pain spots & zero toe guard',
+    strident: 'Wide toe box lets toes spread out naturally, with protective rubber toe cap!',
   },
   {
-    feature: 'Heel Drop Offset',
-    traditional: 'Elevated 10–12mm heel altering pelvic tilt & knee strain',
-    strident: '0mm Zero-Drop platform for natural posture & alignment',
+    feature: 'Sole Height (Zero Drop)',
+    traditional: 'High artificial heel tilts posture and strains knees & lower back',
+    strident: '100% Flat Zero Drop sole lets you sense ground with natural gait',
   },
   {
-    feature: 'Sole Cushioning & Flex',
-    traditional: 'Thick rigid foam restricting foot movement & arch activation',
-    strident: 'Ultra-flexible 4mm sole strengthening 29 foot muscles',
+    feature: 'Water & Moisture Handling',
+    traditional: 'Holds water inside like a heavy wet sponge when walking in water',
+    strident: 'Instant sole drainage holes pour water right out for quick-dry comfort',
   },
   {
-    feature: 'Sensory Feedback',
-    traditional: 'Muffled ground feel reducing agility & nervous system response',
-    strident: 'Proprioceptive ground feel for instant stability & grip',
+    feature: 'Flexibility & Weight',
+    traditional: 'Heavy stiff sole restricts foot movement and causes foot fatigue',
+    strident: 'Ultra-flexible 360° twistable sole moves effortlessly without limits',
   },
   {
-    feature: 'Arch Support Philosophy',
-    traditional: 'Passive artificial arch support causing long-term foot weakness',
-    strident: 'Active self-strengthening arch architecture',
+    feature: 'All-Day Versatility',
+    traditional: 'Limited to basic walking on flat pavement',
+    strident: 'Great for beach wading, boating, trail hiking, gym, and daily wear!',
   },
 ];
 
@@ -50,16 +50,16 @@ export default function ComparisonTable() {
               marginBottom: 16,
             }}
           >
-            Why Barefoot Matters
+            Easy Side-By-Side Comparison
           </span>
           <h2
             className="font-display"
             style={{ fontSize: 'clamp(32px, 5vw, 52px)', fontWeight: 900, lineHeight: 1.1, letterSpacing: '-0.03em' }}
           >
-            Traditional Shoes vs. <span className="gold-text">Strident Barefoot</span>
+            Regular Old Shoes vs. <span className="gold-text">Strident Barefoot</span>
           </h2>
           <p style={{ fontSize: 16, color: '#8e8eb4', marginTop: 14 }}>
-            See how conventional padded shoes compromise your posture versus zero-drop natural footwear.
+            See why switching to barefoot shoes makes walking feel so much easier and more fun!
           </p>
         </div>
 

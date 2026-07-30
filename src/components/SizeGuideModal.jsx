@@ -80,9 +80,8 @@ export default function SizeGuideModal({ onClose }) {
           >
             <Info size={16} style={{ color: '#e8b86d', flexShrink: 0, marginTop: 2 }} />
             <p style={{ fontSize: 13, color: '#c0c0d8', lineHeight: 1.6 }}>
-              For barefoot running shoes, we recommend going <strong style={{ color: '#e8b86d' }}>true to size</strong>. 
-              The wide toe box allows natural toe splay. If between sizes, size up for a roomier feel.
-              Measure your foot in the evening when feet are at their largest.
+              Pick your <strong style={{ color: '#e8b86d' }}>regular shoe size</strong>! 
+              The extra-wide toe room lets your toes wiggle comfortably. If you are between two sizes, pick the slightly larger size for extra happy toe space!
             </p>
           </div>
 

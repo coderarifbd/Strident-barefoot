@@ -8,27 +8,27 @@ import useCartStore from '../store/cartStore';
 
 const PRODUCT = {
   id: 'strident-trailgrip-001',
-  name: 'Strident TrailGrip Minimalist Running Shoe',
+  name: 'Strident Water & Trail Barefoot Shoe',
   price: 119.0,
-  shortDesc: 'Zero-drop barefoot running shoe with TrailGrip outsole. Wide toe box, ultra-flexible 4mm sole, and ground-feel sensory feedback.',
+  shortDesc: 'Move without limits! Features instant sole drainage holes, 100% zero-drop soles, wide toe box with rubber toe protection, and 360° twistable flexibility.',
 };
 
 const FEATURES = [
-  'Zero-drop heel for natural biomechanics',
-  'Anatomic wide toe box for natural splay',
-  '4mm TrailGrip rubber outsole',
-  'Ultra-breathable mesh upper',
-  'Ultra-flexible construction (360° flex)',
-  'Ground Feel Sensory Technology',
-  'Vegan-friendly materials',
-  'Machine washable',
+  'Instant Sole Drainage Holes — Water flows right out when wading',
+  'Zero-Drop Soles — Sense the ground fully with natural walking gait',
+  'Wide Toe Box — Ample space lets toes spread out naturally without red pinch spots',
+  'Protective Rubber Toe Guard — Keeps toes safe from rocks, stumps & trail debris',
+  '360° Twistable Flex — Ultra-lightweight construction rolls & bends freely',
+  'Quick-Dry Breathable Fabric & Skin-Friendly Soft Lining',
+  'Adjustable Speed Toggle Laces — Easy slip-on comfort without tying',
+  'Multi-Activity Versatility — Perfect for beach wading, boating, trail hiking, gym & daily walking',
 ];
 
 const FAQS = [
-  { q: 'Will these fit true to size?', a: 'Yes, the TrailGrip fits true to size. The wide toe box provides extra room without affecting length sizing. If you\'re between sizes, we recommend sizing up.' },
-  { q: 'How long is the transition period?', a: 'Most runners need 2–4 weeks to transition from traditional shoes. We recommend starting with shorter runs and gradually increasing distance to allow your feet and calves to adapt.' },
-  { q: 'Can I use these on both trails and roads?', a: 'Absolutely. The TrailGrip\'s 4mm rubber outsole provides excellent traction on both trail terrain and pavement. The versatility is one of our customers\' favorite features.' },
-  { q: 'Are these covered by the 30-Day Guarantee?', a: 'Yes. Every Strident Barefoot shoe includes our 30-Day Natural Motion Guarantee. If you\'re not fully satisfied, we\'ll accept a return for a full refund or exchange — no questions asked.' },
+  { q: 'Can I wear these shoes in water, rivers, and the ocean?', a: 'Yes! The bottom features instant drainage holes so water flows right out, while the quick-dry mesh upper dries rapidly.' },
+  { q: 'Will these protect my toes on rocky trails?', a: 'Absolutely! The shoe includes a reinforced rubber toe bumper that guards your toes against rocks, roots, and hard surfaces.' },
+  { q: 'Will these fit my normal shoe size?', a: 'Yes! Order your regular shoe size. The wide toe box gives your toes extra room to spread out naturally.' },
+  { q: 'What if I want to return or exchange them?', a: 'Every pair includes our 30-Day Happy Guarantee. If you don\'t love them, we will exchange them or refund your money with zero stress.' },
 ];
 
 export default function Shop() {
