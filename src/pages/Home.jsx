@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Users, Award, Zap } from 'lucide-react';
 import ReviewCarousel from '../components/ReviewCarousel';
@@ -158,7 +158,7 @@ export default function Home() {
               </p>
 
               {/* Feature Highlights List */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-8 w-full max-w-xl">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-9 w-full max-w-xl">
                 {[
                   { icon: '💧', text: 'Instant Sole Drainage Holes' },
                   { icon: '👣', text: 'Wide Toe Box & Toe Guard' },
@@ -168,42 +168,52 @@ export default function Home() {
                   <div
                     key={idx}
                     style={{
-                      background: 'rgba(255,255,255,0.04)',
-                      border: '1px solid rgba(255,255,255,0.08)',
-                      borderRadius: 12,
-                      padding: '10px 14px',
+                      background: 'rgba(255,255,255,0.025)',
+                      border: '1px solid rgba(255,255,255,0.06)',
+                      borderRadius: 10,
+                      padding: '8px 14px',
                       display: 'flex',
                       alignItems: 'center',
                       gap: 10,
                     }}
                   >
-                    <span style={{ fontSize: 18 }}>{item.icon}</span>
-                    <span style={{ fontSize: 13.5, color: '#f0f0f5', fontWeight: 600 }}>{item.text}</span>
+                    <span style={{ fontSize: 16 }}>{item.icon}</span>
+                    <span style={{ fontSize: 13, color: 'rgba(240,240,245,0.9)', fontWeight: 600 }}>{item.text}</span>
                   </div>
                 ))}
               </div>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-wrap items-center gap-4 mb-8">
-                <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}>
+              {/* CTA Buttons - Distinct Action Block with Generous Spacing */}
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-6 mb-8 w-full max-w-xl">
+                <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="flex-1">
                   <Link
                     to="/shop"
-                    className="btn-gold flex items-center gap-2"
-                    style={{ padding: '16px 32px', fontSize: 16, display: 'inline-flex', textDecoration: 'none', borderRadius: 14 }}
+                    className="btn-gold w-full flex items-center justify-center gap-2"
+                    style={{
+                      padding: '16px 24px',
+                      fontSize: 15.5,
+                      fontWeight: 700,
+                      textDecoration: 'none',
+                      borderRadius: 14,
+                      boxShadow: '0 8px 25px rgba(232, 184, 109, 0.28)',
+                      minHeight: 54,
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
                   >
-                    Get Your Pair — $119.00
+                    <span>Get Your Pair — $119</span>
                     <ArrowRight size={18} />
                   </Link>
                 </motion.div>
-                <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}>
+
+                <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="flex-1">
                   <a
                     href="#philosophy"
+                    className="w-full flex items-center justify-center gap-2"
                     style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: 8,
-                      padding: '16px 28px',
-                      fontSize: 16,
+                      padding: '16px 24px',
+                      fontSize: 15.5,
                       background: 'rgba(255,255,255,0.06)',
                       backdropFilter: 'blur(10px)',
                       border: '1px solid rgba(255,255,255,0.15)',
@@ -211,26 +221,43 @@ export default function Home() {
                       color: '#f0f0f5',
                       textDecoration: 'none',
                       fontWeight: 600,
+                      minHeight: 54,
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
                     }}
                   >
-                    Why Barefoot is Best
+                    <span>Why Barefoot is Best</span>
                   </a>
                 </motion.div>
               </div>
 
               {/* Trust Badges */}
-              <div className="flex flex-wrap items-center gap-6" style={{ paddingTop: 8, borderTop: '1px solid rgba(255,255,255,0.08)', width: '100%' }}>
+              <div
+                className="flex flex-wrap items-center justify-between gap-4 max-w-xl"
+                style={{
+                  paddingTop: 24,
+                  borderTop: '1px solid rgba(255,255,255,0.08)',
+                  width: '100%',
+                }}
+              >
                 <div className="flex items-center gap-2">
-                  <div style={{ color: '#e8b86d', fontSize: 15 }}>⭐</div>
-                  <span style={{ fontSize: 13, color: 'rgba(240,240,245,0.7)', fontWeight: 500 }}>4.9/5 from 12,000+ happy feet</span>
+                  <div style={{ color: '#e8b86d', fontSize: 14 }}>⭐</div>
+                  <span style={{ fontSize: 12.5, color: 'rgba(240,240,245,0.75)', fontWeight: 500 }}>
+                    4.9/5 from 12,000+ happy feet
+                  </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div style={{ color: '#e8b86d', fontSize: 15 }}>🚚</div>
-                  <span style={{ fontSize: 13, color: 'rgba(240,240,245,0.7)', fontWeight: 500 }}>Free shipping over $75</span>
+                  <div style={{ color: '#e8b86d', fontSize: 14 }}>🚚</div>
+                  <span style={{ fontSize: 12.5, color: 'rgba(240,240,245,0.75)', fontWeight: 500 }}>
+                    Free shipping over $75
+                  </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div style={{ color: '#e8b86d', fontSize: 15 }}>🛡️</div>
-                  <span style={{ fontSize: 13, color: 'rgba(240,240,245,0.7)', fontWeight: 500 }}>30-Day happy guarantee</span>
+                  <div style={{ color: '#e8b86d', fontSize: 14 }}>🛡️</div>
+                  <span style={{ fontSize: 12.5, color: 'rgba(240,240,245,0.75)', fontWeight: 500 }}>
+                    30-Day happy guarantee
+                  </span>
                 </div>
               </div>
             </motion.div>
