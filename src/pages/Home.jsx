@@ -89,7 +89,7 @@ export default function Home() {
         {/* Content */}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            
+
             {/* Left Column: Headline & Benefits (7 cols) */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
@@ -184,7 +184,10 @@ export default function Home() {
               </div>
 
               {/* CTA Buttons - Distinct Action Block with Generous Spacing */}
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-6 mb-8 w-full max-w-xl">
+              <div
+                className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full max-w-xl"
+                style={{ marginTop: 16, marginBottom: 40 }}
+              >
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="flex-1">
                   <Link
                     to="/shop"
